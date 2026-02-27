@@ -7,6 +7,6 @@ const { protect, authorize } = require("../middleware/authMiddleware");
 router.post("/login", loginUser);
 
 // Admin only register
-router.post("/register", protect, authorize("admin"), registerUser);
+router.post("/register", registerUser);
 
 module.exports = router;
